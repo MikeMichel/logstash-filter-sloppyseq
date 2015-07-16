@@ -8,7 +8,7 @@ require "set"
 # The config looks like this:
 #
 #     filter {
-#       seq {
+#       sloppyseq {
 #         field => "seq"
 #       }
 #     }
@@ -43,4 +43,4 @@ class LogStash::Filters::Sloppyseq < LogStash::Filters::Base
     @seq = @seq + 1
     filter_matched(event)
   end # def filter
-end # class LogStash::Filters::Seq
+end # class LogStash::Filters::Sloppyseq
